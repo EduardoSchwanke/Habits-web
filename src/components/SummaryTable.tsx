@@ -22,8 +22,10 @@ export function SummaryTable() {
             <div className="grid grid-rows-7 grid-flow-col gap-3">
                 {
                     summaryDates.map((day, index) => {
+                        const progress = Math.floor(Math.random() * 11)
+                        console.log(progress)
                         return (
-                            <HabitDay key={day.toString()}/>
+                            <HabitDay key={day.toString()} amount={10} completed={progress}/>
                         )
                     })
                 }
