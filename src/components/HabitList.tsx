@@ -1,10 +1,12 @@
 import * as Checkbox from '@radix-ui/react-checkbox';
+import dayjs from 'dayjs';
 import { Check } from 'phosphor-react';
 import { useEffect, useState } from 'react';
 import { api } from '../lib/axios';
 
 interface HabitListProps {
-    date: Date
+    date: Date,
+    onCompletedChange: (completed: number) => void
 }
 
 interface HabitsInfo {
@@ -16,7 +18,7 @@ interface HabitsInfo {
     CompletedHabits: string[]
 }
 
-export function HabitList({ date }: HabitListProps) {
+export function HabitList({ date, onCompletedChange }: HabitListProps) {
 
     const [habitsInfo, setHabitsInfo] = useState<HabitsInfo>()
 
@@ -30,6 +32,29 @@ export function HabitList({ date }: HabitListProps) {
         })
     }, [])
 
+    async function handleToggleHAbit(habitId: string){
+        const isHabitAlreadyCompleted = habitsInfo!.CompletedHabits.includes(habitId)
+
+        await api.patch(`habits/${habitId}/toggle`)
+
+        let completedHabits: string[] = []
+
+        if(isHabitAlreadyCompleted){
+            completedHabits = habitsInfo!.CompletedHabits.filter(id => id !== habitId)
+        }else{
+            completedHabits = [...habitsInfo!.CompletedHabits, habitId]
+        }
+
+        setHabitsInfo({
+            possibleHabits: habitsInfo!.possibleHabits,
+            CompletedHabits: completedHabits
+        })
+
+        onCompletedChange(completedHabits.length)
+    }
+
+    const isDateInPast= dayjs(date).endOf('day').isBefore(new Date())
+
     return (
         <div className='mt-6 flex flex-col gap-3'>
             {
@@ -37,7 +62,9 @@ export function HabitList({ date }: HabitListProps) {
                     return (
                         <Checkbox.Root
                             key={habit.id}
-                            checked={habitsInfo.CompletedHabits.includes(habit.id)}
+                            onCheckedChange={() => handleToggleHAbit(habit.id)}
+                            defaultChecked={habitsInfo.CompletedHabits.includes(habit.id)}
+                            disabled={isDateInPast}
                             className='flex items-center gap-3 group'
                         >
                             <div className='h-8 w-8 rounded-lg flex items-center justify-center bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500 group-data-[state=checked]:border-green-500'>
