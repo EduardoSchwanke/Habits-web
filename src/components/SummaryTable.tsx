@@ -23,7 +23,7 @@ export function SummaryTable() {
                 {
                     summaryDates.map((day, index) => {
                         const progress = Math.floor(Math.random() * 11)
-                        console.log(progress)
+
                         return (
                             <HabitDay key={day.toString()} amount={10} completed={progress}/>
                         )
