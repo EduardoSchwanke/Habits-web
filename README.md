@@ -5,6 +5,7 @@
 </h1>
 
 ![](https://github.com/LivioAlvarenga/Nlw-Setup/raw/master/files/cover.png?raw=true)
+<p>Aplicação feita na na primeira NLW da Rocktseat em 2023. Nessa aplicação foi criar um app de registro de hábitos.</p>
 
 
 ### 🛠 Tecnologias
