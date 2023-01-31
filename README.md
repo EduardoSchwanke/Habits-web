@@ -4,7 +4,7 @@
     <a href="https://pt-br.reactjs.org/">🔗 React</a>
 </h1>
 
-![](https://s3-alpha.figma.com/hub/file/2858966456/26a6d2c5-bfd4-41e6-8a31-a55ea4898599-cover.png)
+![](https://github.com/LivioAlvarenga/Nlw-Setup/raw/master/files/cover.png?raw=true)
 
 
 ### 🛠 Tecnologias
