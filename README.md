@@ -10,7 +10,7 @@
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
-
+- [Typescript](https://www.typescriptlang.org/)
 - [vitejs](https://vitejs.dev/)
 - [React](https://pt-br.reactjs.org/)
 - [Javascript](https://www.javascript.com/)
