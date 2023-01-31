@@ -24,4 +24,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Features futuras
 
-- [] Cadastro de usuário
+- [ ] Cadastro de usuário
