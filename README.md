@@ -1,6 +1,6 @@
 <h1 align="center">Habits Web</h1>
 
-<h1 align="center">
+<h1>
     <a href="https://pt-br.reactjs.org/">🔗 React - TS</a>
 </h1>
 
