@@ -16,3 +16,12 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Javascript](https://www.javascript.com/)
 - [TailwCSS](https://tailwindcss.com/)
 - [radix-ui](https://www.radix-ui.com/)
+
+
+<h4 align="center"> 
+	🚧  React Select 🚀 Em construção...  🚧
+</h4>
+
+### Features futuras
+
+- [] Cadastro de usuário
