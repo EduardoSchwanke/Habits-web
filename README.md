@@ -1,7 +1,7 @@
 <h1 align="center">Habits Web</h1>
 
 <h1 align="center">
-    <a href="https://pt-br.reactjs.org/">🔗 React</a>
+    <a href="https://pt-br.reactjs.org/">🔗 React - TS</a>
 </h1>
 
 ![](https://github.com/LivioAlvarenga/Nlw-Setup/raw/master/files/cover.png?raw=true)
